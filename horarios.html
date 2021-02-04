@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Clases</title>
+    <style type="text/css">
+        body {
+            font-family: verdana, sans-serif;
+        }
+
+        h1 {
+            margin-top: 1em;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 120px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0, 0, 0, .1),
+                0 0 5px rgba(0, 0, 0, .1),
+                0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .25),
+                0 10px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+        }
+
+        .boton {
+            padding: 10px;
+            background: orange;
+            width: 95px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 1px #000;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .boton:hover {
+            opacity: .7;
+        }
+
+        .horario {
+            margin: auto;
+            transition: height .4s;
+            text-align: center;
+        }
+
+        #tercero,
+        #quinto {
+            display: none;
+        }
+
+        div img {
+            width: 8em;
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 10px 10px 3px #D8D8D8;
+        }
+
+        tr {
+            height: 5.5em;
+        }
+
+        th,
+        td {
+            width: 16%;
+            padding: 20px 10px;
+            border: 1px #000 solid;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .receso {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2em;
+            background-color: burlywood;
+        }
+
+        #firma {
+            position: absolute;
+            top: 0;
+            font-size: 0.75em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='firma'>
+        Elabordado por: Walter Lemus
+    </div>
+    <div>
+        <div class="boton" onclick="divTercero()">
+            3° Grado
+        </div>
+        <div class="boton" onclick="divQuinto()">
+            5° Grado
+        </div>
+        <div>
+            <img src="http://parroquialquezaltepeque.info/matricula/vendors/images/banner-img.png" alt="">
+        </div>
+    </div>
+    <div id='titulo'>
+        <h1>
+            Horarios<br>de<br>Clases
+        </h1>
+    </div>
+    <div id='tercero' class="horario">
+        <table>
+            <caption>
+                <h2>
+                    Horario Tercer Grado
+                </h2>
+            </caption>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <td>8:00 - 8:45</td>
+                <td><a href="http://meet.google.com/ova-cqcx-sec">Fisica</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Ciencias</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Lenguaje</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Matemáticas</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Ciencias</a></td>
+            </tr>
+            <tr>
+                <td>10:25 - 10:30</td>
+                <td colspan="5" class="receso">receso</td>
+            </tr>
+            <tr>
+                <td>10:30 - 11:15</td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Sociales</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Matemáticas</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Sociales</a></td>
+                <td><a href="https://meet.google.com/erw-iogm-zbr">Ingles</a></td>
+                <td><a href="https://meet.google.com/sfd-yucs-fsp">Lenguaje</a></td>
+            </tr>
+            <tr>
+                <td>11:15 - 11:20</td>
+                <td colspan="5" class="receso">receso</td>
+            </tr>
+            <tr>
+                <td>11:20 - 12:05</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="http://meet.google.com/auu-vhwv-yxo">Eduación Fisica <br> Educacion Artistica</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id='quinto' class="horario">
+        <table>
+            <caption>
+                <h2>
+                    Horario Quinto Grado
+                </h2>
+            </caption>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <td>9:30 - 10:45</td>
+                <td><a href="https://meet.google.com/ycu-wspy-jib">Ingles</a></td>
+                <td><a href="https://meet.google.com/wft-cdwk-iww">Eduacion<br>en la fe</a></td>
+                <td><a href="https://meet.google.com/bcz-qiuq-xhi">Ciencias</a></td>
+                <td><a href="https://meet.google.com/why-kspp-skq">Matemáticas</a></td>
+                <td><a href="https://meet.google.com/dqo-qdmf-dca">Lenguaje</a></td>
+            </tr>
+            <tr>
+                <td>10:25 - 10:30</td>
+                <td colspan="5" class="receso">receso</td>
+            </tr>
+            <tr>
+                <td>10:30 - 11:15</td>
+                <td><a href="https://meet.google.com/why-kspp-skq">Matemáticas</a></td>
+                <td><a href="https://meet.google.com/yjn-tcyq-nre">Sociales</a></td>
+                <td><a href="https://meet.google.com/dqo-qdmf-dca">Lenguaje</a></td>
+                <td><a href="https://meet.google.com/yjn-tcyq-nre">Sociales</a></td>
+                <td><a href="https://meet.google.com/bcz-qiuq-xhi">Ciencias</a></td>
+            </tr>
+            <tr>
+                <td>11:15 - 11:20</td>
+                <td colspan="5" class="receso">receso</td>
+            </tr>
+            <tr>
+                <td>11:20 - 12:05</td>
+                <td></td>
+                <td><a href="https://meet.google.com/yqp-pdsf-wfp">Eduación Fisica <br> Educacion Artistica</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script type="text/javascript">
+    function divTercero() {
+        let element = document.getElementById('tercero');
+        let elementStyle = window.getComputedStyle(element);
+        let elementValor = elementStyle.getPropertyValue('display');
+        if (elementValor == 'none') {
+            document.getElementById("quinto").style.display = "none";
+            document.getElementById("tercero").style.display = "block";
+            document.getElementById("titulo").style.display = "none";
+        } else {
+            document.getElementById("tercero").style.display = "none";
+            document.getElementById("titulo").style.display = "block";
+        }
+    }
+    function divQuinto() {
+        let element = document.getElementById('quinto');
+        let elementStyle = window.getComputedStyle(element);
+        let elementValor = elementStyle.getPropertyValue('display');
+        if (elementValor == 'none') {
+            document.getElementById("tercero").style.display = "none";
+            document.getElementById("titulo").style.display = "none";
+            document.getElementById("quinto").style.display = "block";
+        } else {
+            document.getElementById("quinto").style.display = "none";
+            document.getElementById("titulo").style.display = "block";
+        }
+    }
+</script>
+
+</html>
